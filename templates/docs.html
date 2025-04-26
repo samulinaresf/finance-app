@@ -1,0 +1,78 @@
+{% extends "base.html" %} 
+{% block content %}
+    <div class="content">
+        <main>
+            <div class="content__text">
+                <h2>Documentación de uso</h2>
+                <p id="update">Última actualización: 26/04/2025</p>
+
+                <ol>
+                    <li>
+                        <h3>¿Cómo empezar?</h3><br>
+                        Para empezar ve a <a class="link-docs" href="{{ url_for('faq') }}">Inicio</a> y sube tu extracto de cuenta de Revolut, como se indica en la imagen. Para obtener un extracto puedes abrir tu app de Revolut, ir a tu cuenta y sacar un extracto formato CSV. Arrastras el archivo o pulsas en la zona indicada y presionas el botón "Subir"
+                    </li>
+
+                    <li>
+                        <h3>¿Qué archivo necesito?</h3><br>
+                        Exporta un archivo CSV desde Revolut con tus movimientos bancarios. Sube el archivo sin modificarlo, tal y como lo descargaste. La app no acepta otros formatos por ahora.
+                    </li>
+
+                    <li>
+                        <h3>¿Cómo subo el archivo?</h3><br>
+                        Ve al inicio y usa el botón "Subir archivo". Selecciona tu archivo CSV y en segundos verás un resumen visual con tus datos financieros.
+                    </li>
+
+                    <li>
+                        <h3>¿Qué pasa con mis datos?</h3><br>
+                        Nada se guarda. Todo el procesamiento ocurre mientras navegas la app. Al cerrar o actualizar la página, tu archivo se elimina automáticamente. Se elimina tanto de la base de datos como del sistema por motivos de seguridad. Es por ello que cuando salgas de la página 
+                    </li>
+
+                    <li>
+                        <h3>¿Qué información me muestra la app?</h3><br>
+                        Verás tus gastos e ingresos organizados por categorías, tu balance mensual, y gráficos para entender mejor tus hábitos financieros.
+                    </li>
+
+                    <li>
+                        <h3>¿Necesito registrarme?</h3><br>
+                        No. Puedes usar la aplicación sin registrarte ni introducir datos personales.
+                    </li>
+
+                    <li>
+                        <h3>¿Puedo usarla desde el móvil?</h3><br>
+                        Sí, aunque la app está optimizada principalmente para escritorio. Aún así, puedes subir archivos y ver tus datos desde el móvil sin problema.
+                    </li>
+
+                    <li>
+                        <h3>Más preguntas frecuentes</h3><br>
+                        Puedes visitar la sección <a class="link-docs" href="{{ url_for('faq') }}">FAQ</a>.
+                    </li>
+                </ol>
+                <h2>Documentación de técnica</h2>
+                <ol>
+                    <li>
+                        <h3>Stack tecnológico</h3><br>
+                        El frontend fue realizado con HTML, CSS y Javascript. El diseño responde a unos colores predefinidos en variables previamente y el diseño es minimalista. El lenguaje principal del backend es Python 3 en su versión. La librería usada para el desarrollo es Flask, mientras que se usó la de Pandas para limpieza y extracción de datos. Los gráficos fueron creados con Plotly ya que dan mucho juego para hacer gráficos interactivos.La base de datos es relacional construida en SQLite 3 aunque no tiene mucho uso porque todos los archivos que recopilamos los eliminamos al momento. Si en un futuro creamos un método de autenticación utilizaremos bases de datos relacionales y actualizaremos el contenido.
+                    </li>
+
+                    <li>
+                        <h3>Más información en los requerimientos</h3><br>
+                        <ul>
+                            <li>Flask (servidor web)
+                            <li>Werkzeug (gestión de archivos subida/descarga)
+                            <li>pandas (procesamiento de archivos CSV)
+                            <li>plotly (creación de gráficos interactivos)
+                            <li>sqlite3 (gestión de base de datos local, incorporado en Python)
+                        </ul>
+                        <p>Las versiones recomendadas son:</p>
+                        <ul>
+                            <li>Flask==2.2.5</li>
+                            <li>Werkzeug==2.2.2</li>
+                            <li>pandas==2.2.1</li>
+                            <li>plotly==5.18.0</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </main>
+    </div>
+{% endblock %}

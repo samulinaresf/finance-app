@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+        <div class="content">
+            <main>
+                <h2>Sube tu extracto Revolut</h2>
+                <div type="dropzone" class="upload-box" id="drop-area">
+                    <!--Mirar drag and drop para poder hacerlo-->
+                    <p id="drop-text">Arrastre o suba el archivo CSV</p>
+                    <input type="file" id="file-element" hidden>
+                    <div id="file-preview"></div>
+                </div>
+                <div id="error-message"></div>
+                <button id="delete-element" class="delete-element">Eliminar archivo</button>
+                <button id="upload-element" class="upload-button">Subir</button>
+                <script>
+                    const UPLOAD_URL = "{{ url_for('uploads') }}";
+                </script>
+                <script src="{{ url_for('static', filename='../static/js/main.js') }}"></script>
+            </main>
+        </div>
+
+{% endblock %}
+        

@@ -1,0 +1,33 @@
+{% extends "base.html" %} 
+{% block content %}
+    <div class="content">
+        <main>
+            <div class="content__text">
+                <h2>Sobre Nosotros</h2>
+                <p id="update">Última actualización: 26/04/2025</p>
+                <ol>
+                    <li>
+                        <span>¿Cómo nace esta plataforma?</span><br>
+                        Esta plataforma ha sido desarrollada con el objetivo de ofrecer una herramienta sencilla, educativa y respetuosa con la privacidad para visualizar extractos bancarios. El fin de esta herramienta es ofrecer al usuario la posibilidad de añadir un extracto y ver gráficamente como ha ido su balance.
+                    </li>
+                    <li>
+                        <span>¿Por qué nació este proyecto?</span><br>
+                        La idea surgió como parte de un proyecto personal y de aprendizaje, con la intención de facilitar el análisis de gastos e ingresos sin necesidad de entregar datos a terceros. Además, crear un proyecto más para añadir a mi portfolio.
+                    </li>
+                    <li>
+                        <span>¿Cuál es nuestra filosofía?</span><br>
+                        Privacidad, transparencia y accesibilidad. Queremos que cualquier persona pueda entender sus finanzas sin complicaciones y sin poner en riesgo su información.
+                    </li>
+                    <li>
+                        <span>¿Qué tecnologías usamos?</span><br>
+                        Esta app está construida en python usando las librerías de Flask, Pandas y Plotly. Puedes ver toda la información técnica en el apartado de <a class="link-docs" href="/documentacion">documentación</a>
+                    </li>
+                    <li>
+                        <span>¿Qué planes hay para el futuro?</span><br>
+                        Ampliar funcionalidades, permitir el uso en móviles de forma más cómoda y añadir más herramientas visuales sin comprometer la privacidad del usuario. También añadir más formatos para permitir extractos de cuentas de otros bancos.
+                    </li>
+                </ol>
+            </div>
+        </main>
+    </div>
+{% endblock %}

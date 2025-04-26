@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+        <div class="content">
+                <main>
+                        <h1>Gráficos</h1>
+                        <div class="content__box">
+                                <div id="graph-incomes" class="graph">
+                                        {{ incomes|safe }}
+                                </div>
+                                
+                                <div id="graph-expenses" class="graph" style="display: none;">
+                                        {{ expenses|safe }}
+                                </div>
+                                
+                                <div id="graph-comparison" class="graph" style="display: none;">
+                                        {{ comparison|safe }}
+                                </div>
+                                <div class="graph-buttons">
+                                        <button id="button-incomes">Ingresos</button>
+                                        <button id="button-expenses">Gastos</button>
+                                        <button id="button-comparison">Ingresos/Gastos</button>
+                                </div>
+                                <button id="delete-csv" class="delete-element">Eliminar y volver al inicio</button>
+                        </div>
+                        <script>
+                                const uploadedFileName = "{{ filename }}";
+                        </script>        
+                        <script src="{{ url_for('static', filename='../static/js/main.js') }}"></script>
+                </main>
+        </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %} 
+{% block content %}
+    <div class="content">
+        <main>
+            <div class="content__text">
+                <h2>Preguntas Frecuentes (FAQ)</h2>
+                <p id="update">Última actualización: 26/04/2025</p>
+                <ul>
+                    <li>
+                        <span>¿Qué hace esta aplicación?</span><br>
+                        Te permite subir un archivo CSV de tu cuenta de Revolut y visualizar tus movimientos financieros en forma de gráficos y tablas.
+                    </li>
+                    <li>
+                        <span>¿Se guardan mis archivos o datos?</span><br>
+                        No. Los archivos se procesan solo mientras estás en la sesión. Al cerrar o refrescar la página, los datos se eliminan automáticamente.
+                    </li>
+                    <li>
+                        <span>¿Debo registrarme o crear una cuenta?</span><br>
+                        No es necesario. Puedes usar la aplicación sin crear una cuenta ni proporcionar datos personales.
+                    </li>
+                    <li>
+                        <span>¿Qué tipo de archivos acepta?</span><br>
+                        Solo se aceptan archivos en formato CSV exportados desde Revolut, sin modificaciones previas.
+                    </li>
+                    <li>
+                        <span>¿Qué pasa si cierro o refresco la página?</span><br>
+                        Se elimina todo el contenido temporal: archivos, resultados y gráficos.
+                    </li>
+                    <li>
+                        <span>¿La aplicación es segura?</span><br>
+                        Sí. Aunque no guarda datos, todo el procesamiento ocurre de forma privada durante tu sesión.
+                    </li>
+                    <li>
+                        <span>¿Puedo usarla desde el móvil?</span><br>
+                        Sí, pero la interfaz está optimizada principalmente para ordenadores.
+                    </li>
+                    <li>
+                        <span>Tengo otra duda, ¿cómo puedo contactar?</span><br>
+                        Puedes escribirme a [tu correo o redes] si tienes sugerencias o preguntas adicionales.
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+{% endblock %}
